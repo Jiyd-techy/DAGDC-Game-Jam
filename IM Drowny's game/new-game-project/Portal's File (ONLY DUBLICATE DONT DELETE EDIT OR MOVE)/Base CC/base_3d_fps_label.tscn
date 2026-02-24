@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b7tqf0tylschg"]
+
+[ext_resource type="Script" uid="uid://b1e43tptfslv0" path="res://Base/base_3d_fps_label.gd" id="1_44mqv"]
+
+[node name="Base 3D FPS Label" type="Label3D" unique_id=309935844]
+script = ExtResource("1_44mqv")

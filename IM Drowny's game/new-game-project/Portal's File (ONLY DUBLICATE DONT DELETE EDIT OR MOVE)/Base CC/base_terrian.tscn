@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bxby2tt18aejh"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vdgwp"]
+size = Vector2(100, 100)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ggutn"]
+size = Vector3(100, 1, 100)
+
+[node name="Base Terrian" type="Node3D" unique_id=953805766]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=342185856]
+mesh = SubResource("PlaneMesh_vdgwp")
+
+[node name="Terrian Static body" type="StaticBody3D" parent="MeshInstance3D" unique_id=8141267]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/Terrian Static body" unique_id=1969414838]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_ggutn")

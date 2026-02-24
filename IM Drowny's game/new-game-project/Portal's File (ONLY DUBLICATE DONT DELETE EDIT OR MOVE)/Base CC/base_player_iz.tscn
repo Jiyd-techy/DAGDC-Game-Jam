@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://car1gbal7iesa"]
+
+[ext_resource type="Script" uid="uid://bphbmpv1b5duc" path="res://Portal's File (ONLY DUBLICATE DONT DELETE EDIT OR MOVE)/Base CC/base_player_iz.gd" id="1_drbd2"]
+[ext_resource type="PackedScene" uid="uid://dxoqgh2jmbk4h" path="res://Portal's File (ONLY DUBLICATE DONT DELETE EDIT OR MOVE)/Base CC/ui_iz.tscn" id="2_g34te"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_drbd2"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_115ky"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_g8cy4"]
+radius = 3.0
+
+[node name="Base Player IZ" type="CharacterBody3D" unique_id=725964100 groups=["player"]]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_drbd2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1538890216]
+shape = SubResource("CapsuleShape3D_drbd2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1242138694]
+mesh = SubResource("CapsuleMesh_115ky")
+
+[node name="Head" type="Node3D" parent="." unique_id=2137314380]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.58052945, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=1493919083]
+
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D" unique_id=2092082469]
+target_position = Vector3(0, 0, -3)
+collide_with_areas = true
+
+[node name="Area3D" type="Area3D" parent="." unique_id=13026872]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=28683122]
+shape = SubResource("SphereShape3D_g8cy4")
+
+[node name="UI IZ" parent="." unique_id=671188487 instance=ExtResource("2_g34te")]

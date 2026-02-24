@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dxoqgh2jmbk4h"]
+
+[ext_resource type="Script" uid="uid://dly3v44x4qvl6" path="res://Portal's File (ONLY DUBLICATE DONT DELETE EDIT OR MOVE)/Base CC/ui_iz.gd" id="1_emqt2"]
+[ext_resource type="PackedScene" uid="uid://h2pops7te8e5" path="res://Portal's File (ONLY DUBLICATE DONT DELETE EDIT OR MOVE)/Base CC/base_show_fps.tscn" id="3_m7glr"]
+
+[node name="UI IZ" type="CanvasLayer" unique_id=671188487]
+script = ExtResource("1_emqt2")
+
+[node name="primary" type="Sprite2D" parent="." unique_id=1692711679]
+position = Vector2(1060, 62)
+scale = Vector2(0.05, 0.05)
+
+[node name="Label" type="Label" parent="." unique_id=718656406]
+offset_left = 3.0
+offset_top = 80.0
+offset_right = 43.0
+offset_bottom = 103.0
+text = "Inventory"
+
+[node name="Base Show FPS" parent="." unique_id=145964653 instance=ExtResource("3_m7glr")]
+offset_left = 20.0
+offset_top = 23.0
+offset_right = 95.0
+offset_bottom = 46.0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="usePrimary" type="Sprite2D" parent="." unique_id=18837127]
+position = Vector2(1034, 575)
+scale = Vector2(0.4, 0.4)

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://h2pops7te8e5"]
+
+[ext_resource type="Script" uid="uid://cy4ctqijle0vl" path="res://Portal's File (ONLY DUBLICATE DONT DELETE EDIT OR MOVE)/Base CC/base_show_fps.gd" id="1_lbmib"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_qyq6n"]
+
+[node name="Base Show FPS" type="Label" unique_id=145964653]
+z_index = 1
+offset_right = 40.0
+offset_bottom = 23.0
+text = "FPS 999/0"
+script = ExtResource("1_lbmib")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=750358728]
+modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
+position = Vector2(38.5, 12.5)
+scale = Vector2(0.7421875, 0.2578125)
+texture = ExtResource("2_qyq6n")

@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://jf15aonwibwk"]
+
+[ext_resource type="PackedScene" uid="uid://car1gbal7iesa" path="res://Portal's File (ONLY DUBLICATE DONT DELETE EDIT OR MOVE)/Base CC/base_player_iz.tscn" id="1_pci8w"]
+[ext_resource type="PackedScene" uid="uid://bxby2tt18aejh" path="res://Portal's File (ONLY DUBLICATE DONT DELETE EDIT OR MOVE)/Base CC/base_terrian.tscn" id="2_osee3"]
+[ext_resource type="PackedScene" uid="uid://c5x6eqs8mq5vb" path="res://Portal's File (ONLY DUBLICATE DONT DELETE EDIT OR MOVE)/Base CC/level_0.tscn" id="3_osee3"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pci8w"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_osee3"]
+sky_material = SubResource("ProceduralSkyMaterial_pci8w")
+
+[sub_resource type="Environment" id="Environment_8hcn7"]
+background_mode = 2
+sky = SubResource("Sky_osee3")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Main Cotten and Cloud" type="Node3D" unique_id=2064653753]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=154865736]
+environment = SubResource("Environment_8hcn7")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=279774911]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Base Player IZ" parent="." unique_id=725964100 instance=ExtResource("1_pci8w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Base Terrian" parent="." unique_id=953805766 instance=ExtResource("2_osee3")]
+
+[node name="Level 0" parent="." unique_id=1832452584 instance=ExtResource("3_osee3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.95302844, 0, -6.0667033)
